@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PostsRoutingModule } from './posts-routing.module';
 import { PostsComponent } from './posts.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { ComponentsModule } from '../../components/components.module';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [
     CommonModule,
     PostsRoutingModule,
+    ComponentsModule,
     TranslateModule.forChild()
   ]
 })
