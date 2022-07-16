@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { PostItemComponent } from './post-item/post-item.component';
+import { PostItemProfileComponent } from './post-item-profile/post-item-profile.component';
 
 
 @NgModule({
@@ -10,8 +11,9 @@ import { PostItemComponent } from './post-item/post-item.component';
     TranslateModule.forChild(),    
   ],
   declarations: [
-    PostItemComponent
+    PostItemComponent,
+    PostItemProfileComponent
   ],
-  exports: [PostItemComponent]
+  exports: [PostItemComponent, PostItemProfileComponent]
 })
 export class ComponentsModule { }

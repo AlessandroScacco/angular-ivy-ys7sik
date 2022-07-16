@@ -48,6 +48,14 @@ $font-montserrat: Montserrat, sans-serif;
   font-weight: bold;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.textWhite {
+  color: $white
+}
+
 h6 {
   @extend .baseText;
   font-size: $font-size-large;
@@ -65,7 +73,7 @@ h4 {
 
 h3 {
   @extend .baseText;
-  font-size: $font-size-h2;
+  font-size: $font-size-h3;
 }
 
 h2 {

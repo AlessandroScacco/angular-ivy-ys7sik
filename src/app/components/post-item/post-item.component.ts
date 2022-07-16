@@ -7,7 +7,7 @@ import { Post } from '../../interfaces/post.interface';
   styleUrls: ['./post-item.component.scss']
 })
 export class PostItemComponent implements OnInit {
-
+  
   @Input() post: Post;
 
   constructor() { }
