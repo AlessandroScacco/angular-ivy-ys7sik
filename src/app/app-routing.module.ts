@@ -5,13 +5,13 @@ import { PathPage } from './common/constants/path-page';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: PathPage.ARTICLES,
+    redirectTo: PathPage.POSTS,
     pathMatch: 'full',
   },
   {
-    path: PathPage.ARTICLES,
+    path: PathPage.POSTS,
     loadChildren: () =>
-      import('./pages/articles/articles.module').then((module) => module.ArticlesModule),
+      import('./pages/posts/posts.module').then((module) => module.PostsModule),
   },
 ];
 
