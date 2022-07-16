@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: PathPage.POSTS,
     loadChildren: () =>
-      import('./pages/post/post.module').then((module) => module.PostModule),
+      import('./pages/posts/posts.module').then((module) => module.PostsModule),
   },
 ];
 
