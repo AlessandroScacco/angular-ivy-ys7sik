@@ -1,5 +1,5 @@
 export class PathPage {
-    public static readonly ARTICLES: string = 'articles';
+    public static readonly POSTS: string = 'posts';
     public static readonly NOT_FOUND: string = '**';
   }
   
