@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { pic, picMod1, picMod2 } from '../assets/exercise';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
