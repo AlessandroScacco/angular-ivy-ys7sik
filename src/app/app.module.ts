@@ -9,6 +9,7 @@ import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpInterceptorService } from "./service/http/http-interceptor.service";
 import { HttpErrorInterceptorService } from "./service/http/error-interceptor.service";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function HttpTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, "assets/i18n/", ".json");
@@ -27,6 +28,7 @@ export function HttpTranslateLoader(http: HttpClient): TranslateHttpLoader {
         deps: [HttpClient],
       },
     }),
+    NgbModule,
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
