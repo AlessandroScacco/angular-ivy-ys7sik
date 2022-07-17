@@ -12,6 +12,8 @@ export class PostsComponent implements OnInit {
   posts: Array<Post> = [];
   users: Array<User> = [];
 
+  postSelected: Post;
+
   constructor(private postPageService: PostsPageService) {}
 
   ngOnInit(): void {
@@ -25,5 +27,10 @@ export class PostsComponent implements OnInit {
         this.posts = posts;
         this.users = users;
       });
+  }
+
+  handleProfileClicked(post: Post): void {
+    console.warn('Post cliecked : ', post);
+    
   }
 }

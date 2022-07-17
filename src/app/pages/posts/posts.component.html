@@ -1,12 +1,14 @@
 <section class="posts-container">
 
     <div class="card ">
+        <p *ngIf="postSelected">Post selezionato: {{postSelected?.title}}</p>
         <div class="card-header small-text">
             Lista di post con informazioni dell'utente che ha scritto il post
         </div>
         <div class="card-body">
             <div class="post-item-container" *ngFor="let post of posts">                        
-                <app-post-item [post]="post" [user]="post.userId | userFind: users"></app-post-item>                
+                <app-post-item [post]="post" [user]="post.userId | userFind: users"
+                (profileClicked)="postSelected = post"></app-post-item>                
             </div>
         </div>
       </div>
