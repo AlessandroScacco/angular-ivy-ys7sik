@@ -1,6 +1,6 @@
-<div class="card post-detail-card-container container-fluid">   
+<div class="card post-detail-card-container container-fluid shadow bg-body rounded border-0">   
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 mb-3">
             <div class="xsmall-text" *ngIf="user?.username">        
                 <span>{{'posts.postPublishedFrom' | translate}} {{user.name}} </span>
                 <span> {{'common.alias' | translate}} </span>        
@@ -9,14 +9,16 @@
                 </a>
             </div>       
         </div>
-        <div class="col-12">
+        <div class="col-12 mb-3">
             <h5 class="text-color-primary">{{post.title}}</h5>
         </div>
-        <div class="col-12">
+        <div class="col-12 mb-3">
             <h5 class="regular-text">{{post.body}}</h5>
         </div>
-        <div class="col-12">
-            <button (click)="handleClose()">CHIUDI</button>
+        <div class="col-2">                        
+            <app-custom-button [label]="'common.close' | translate" 
+                                [cssClass]="'regular'"
+                                (click)="handleClose()"></app-custom-button>
         </div>
     </div>
     

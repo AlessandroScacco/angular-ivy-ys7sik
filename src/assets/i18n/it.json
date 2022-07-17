@@ -1,6 +1,7 @@
 {    
     "common": {              
-        "alias": "alias"
+        "alias": "alias",
+        "close": "Chiudi"
     },
     "posts": {
         "title_post_label":"Titolo Post",
