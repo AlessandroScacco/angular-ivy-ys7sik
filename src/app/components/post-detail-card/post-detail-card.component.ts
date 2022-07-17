@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PathPage } from '../../common/constants/path-page';
 import { Post } from '../../interfaces/post.interface';
 import { User } from '../../interfaces/user.interface';
@@ -13,6 +13,8 @@ export class PostDetailCardComponent implements OnInit {
   @Input() post: Post;
   @Input() user: User;
 
+  @Output() closeClicked: EventEmitter<void> = new EventEmitter<void>();
+
   PathPage = PathPage;
 
   constructor() { }
@@ -20,4 +22,7 @@ export class PostDetailCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  handleClose(): void {
+    this.closeClicked.emit();
+  }
 }

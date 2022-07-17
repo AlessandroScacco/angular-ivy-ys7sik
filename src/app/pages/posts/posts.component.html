@@ -8,7 +8,8 @@
         <div class="card-body">
             <div *ngIf="postSelected" class="detail-card-container">
                 <app-post-detail-card [post]="postSelected" 
-                    [user]="postSelected.userId | userFind: users">
+                    [user]="postSelected.userId | userFind: users"
+                    (closeClicked)="postSelected=null">
                 </app-post-detail-card>
             </div>    
 
