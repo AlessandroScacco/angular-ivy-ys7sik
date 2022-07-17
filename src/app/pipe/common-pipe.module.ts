@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { UserFindPipe } from './user-filter.pipe';
+import { UserFindPipe, UserInitialNamePipe } from './user-filter.pipe';
 
 @NgModule({
   declarations: [	
-      UserFindPipe
+      UserFindPipe,
+      UserInitialNamePipe
    ],
   exports: [
-    UserFindPipe   
+    UserFindPipe,
+    UserInitialNamePipe
   ]
 })
 export class CommonPipeModule { }

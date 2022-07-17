@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-post-item-profile',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-item-profile.component.scss']
 })
 export class PostItemProfileComponent implements OnInit {
+  @Input() label: string;
 
   constructor() { }
 
