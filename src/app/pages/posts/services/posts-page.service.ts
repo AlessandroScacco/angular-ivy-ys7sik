@@ -2,16 +2,17 @@ import { Injectable } from "@angular/core";
 import { Observable, zip } from "rxjs";
 import { Post } from "../../../interfaces/post.interface";
 import { User } from "../../../interfaces/user.interface";
-import { PostService } from "../../../services/api/post.service";
-import { UserService } from "../../../services/api/user.service";
+import { PostApiService } from "../../../services/api/post-api.service";
+import { UserApiService } from "../../../services/api/user-api.service";
+
 
 @Injectable({
   providedIn: "root",
 })
 export class PostsPageService {
   constructor(
-    private postService: PostService,
-    private userService: UserService
+    private postService: PostApiService,
+    private userService: UserApiService
   ) {}
 
   getPostsUsers(): Observable<[Array<Post>, Array<User>]> {

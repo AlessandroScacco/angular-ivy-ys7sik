@@ -2,6 +2,7 @@ import { ViewportScroller } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
 import { debounceTime } from "rxjs";
+import { EndPoint } from "../../common/constants/endpoint";
 import { Post } from "../../interfaces/post.interface";
 import { User } from "../../interfaces/user.interface";
 import { PostsPageService } from "./services/posts-page.service";
@@ -28,6 +29,8 @@ export class PostsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    
+    
     this.retrieveData();
     this.initializeFormGroup();
   }
