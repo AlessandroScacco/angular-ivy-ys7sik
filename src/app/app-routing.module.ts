@@ -13,6 +13,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/posts/posts.module').then((module) => module.PostsModule),
   },
+  {
+    path: PathPage.USERS + '/:id',
+    loadChildren: () =>
+      import('./pages/user/user.module').then((module) => module.UserModule),
+  },
+  {
+    path: PathPage.NOT_FOUND,
+    redirectTo: PathPage.POSTS,
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
