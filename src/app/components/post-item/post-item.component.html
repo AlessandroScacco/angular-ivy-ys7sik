@@ -1,18 +1,18 @@
 <div class="post-item-container container-fluid">
-        <div class="row">
-            <div class="col-12 post-item-profile-container col-sm-2 col-md-1 cursor">
-                <app-post-item-profile></app-post-item-profile>
-            </div>
-            <div class="col cursor">
-                <div class="row row-title align-items-end">
-                    <div class="col-12 align-self-start">
-                        <h5 class="text-color-secondary">{{post.title}}</h5>
-                    </div>
-                    <div class="col-12 align-self-end xsmall-text">
-                        pubblicato da: <a href="" class="text-color-secondary">Bret</a>
-                    </div>
+    <div class="row">
+        <div class="col-12 post-item-profile-container col-sm-2 col-md-1 cursor">
+            <app-post-item-profile></app-post-item-profile>
+        </div>
+        <div class="col cursor">
+            <div class="row row-title align-items-end">
+                <div class="col-12 align-self-start">
+                    <h5 class="text-color-secondary">{{post.title}}</h5>
+                </div>
+                <div class="col-12 align-self-end xsmall-text" *ngIf="user?.username">
+                    {{"test" | translate}} 
+                    <a href="" class="text-color-secondary">{{user?.username}}</a>
                 </div>
             </div>
         </div>
+    </div>
 </div>
-
