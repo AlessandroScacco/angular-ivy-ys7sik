@@ -16,6 +16,11 @@ $font-montserrat: Montserrat, sans-serif;
   color: $black;
 }
 
+.xsmall-text {
+  @extend .baseText;
+  font-size: $font-size-xsmall;
+}
+
 .small-text {
   @extend .baseText;
   font-size: $font-size-small;
@@ -52,8 +57,11 @@ $font-montserrat: Montserrat, sans-serif;
   font-weight: bold;
 }
 
-.textWhite {
+.text-color-white {
   color: $white
+}
+.text-color-secondary {
+  color: $secondary;
 }
 
 h6 {
