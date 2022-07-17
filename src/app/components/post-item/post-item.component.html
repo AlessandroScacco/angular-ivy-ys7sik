@@ -9,9 +9,11 @@
                 <div class="col-12 align-self-start">
                     <h5 class="text-color-primary">{{post.title}}</h5>
                 </div>
-                <div class="col-12 align-self-end xsmall-text" *ngIf="user?.username">
-                    {{"posts.publishedFrom" | translate}}
-                    <a href="{{PathPage.USERS + '/' +user.id}}" class="text-color-primary">{{user?.username}}</a>
+                <div class="col-12 align-self-end xsmall-text bold" *ngIf="user?.username">
+                    {{"posts.publishedFrom" | translate}} 
+                    <a href="{{PathPage.USERS + '/' +user.id}}" class="text-color-primary">
+                         {{user?.username}}
+                        </a>
                 </div>
             </div>
         </div>

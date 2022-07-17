@@ -7,8 +7,7 @@ $font-montserrat: Montserrat, sans-serif;
 }
 
 .baseText {
-  font-family: $font-montserrat;
-  font-weight: 900;
+  font-family: $font-montserrat;  
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -75,16 +74,19 @@ $font-montserrat: Montserrat, sans-serif;
 h6 {
   @extend .baseText;
   font-size: $font-size-large;
+  font-weight: bold;
 }
 
 h5 {
   @extend .baseText;
   font-size: $font-size-h5;
+  font-weight: bold;
 }
 
 h4 {
   @extend .baseText;
   font-size: $font-size-h4;
+  font-weight: bold;
 }
 
 h3 {

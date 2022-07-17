@@ -1,7 +1,16 @@
 {    
     "common": {              
         "alias": "alias",
-        "close": "Chiudi"
+        "close": "Chiudi",
+        "username": "Nome Utente",
+        "email": "Email",
+        "phone": "Telefono",
+        "address": "Indirizzo",
+        "website": "Sito Web",
+        "company": "Azienda",
+        "name": "Nome",
+        "catchPhrase": "Slogan",
+        "bs": "Bs"
     },
     "posts": {
         "title_post_label":"Titolo Post",

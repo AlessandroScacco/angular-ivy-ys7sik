@@ -25,7 +25,7 @@ export class UserComponent implements OnInit {
 
   private userByidService(id: string): void {
     this.userApiService.getUserById(id).subscribe((user: User) => {
-      this.user = user;
+      this.user = user;      
     });
   }
 }
