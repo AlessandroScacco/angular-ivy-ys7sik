@@ -6,6 +6,11 @@
     .card {
         width: 100%;
         max-width: 60rem;    
+        .card-body {
+            .detail-card-container {
+                padding: 3rem;
+            }
+        }        
     }
     .post-item-container {
         padding: 1rem;
@@ -14,4 +19,5 @@
             border: unset;
         }
     }
+    
 }

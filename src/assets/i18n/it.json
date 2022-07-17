@@ -1,6 +1,8 @@
 {    
     "common": {
-        "publishedFrom": "Pubblicato da:"
-    }
+        "publishedFrom": "Pubblicato da:",
+        "postPublishedFrom": "Post pubblicato da:",
+        "alias": "alias"
+    }   
     
 }
