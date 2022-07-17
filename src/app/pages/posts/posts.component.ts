@@ -1,3 +1,4 @@
+import { ViewportScroller } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
 import { debounceTime } from "rxjs";
@@ -21,7 +22,7 @@ export class PostsComponent implements OnInit {
     title: new FormControl(),
   });
 
-  constructor(private postPageService: PostsPageService) {}
+  constructor(private postPageService: PostsPageService, private scroller: ViewportScroller) {}
 
   ngOnInit(): void {
     this.retrieveData();
@@ -43,7 +44,10 @@ export class PostsComponent implements OnInit {
       .subscribe((value: any) => (this.titleFilter = value.title));
   }
 
-  handleProfileClicked(post: Post): void {
-    console.warn("Post cliecked : ", post);
+  handleProfileClicked( post: Post): void {    
+    this.postSelected = post;
+    setTimeout(() => {
+      this.scroller.scrollToAnchor("targetPostSelected");  
+    }, 10);
   }
 }
