@@ -7,8 +7,8 @@ import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { AppRoutingModule } from "./app-routing.module";
-import { HttpInterceptorService } from "./service/http/http-interceptor.service";
-import { HttpErrorInterceptorService } from "./service/http/error-interceptor.service";
+import { HttpInterceptorService } from "./services/http/http-interceptor.service";
+import { HttpErrorInterceptorService } from "./services/http/error-interceptor.service";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function HttpTranslateLoader(http: HttpClient): TranslateHttpLoader {

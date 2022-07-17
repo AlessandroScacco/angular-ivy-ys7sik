@@ -1,0 +1,17 @@
+@import "variables";
+
+.posts-container {
+    display: flex;
+    justify-content: center;
+    .card {
+        width: 100%;
+        max-width: 60rem;    
+    }
+    .post-item-container {
+        padding: 1rem;
+        border-bottom: 0.1rem solid $separator;
+        &:last-child {
+            border: unset;
+        }
+    }
+}

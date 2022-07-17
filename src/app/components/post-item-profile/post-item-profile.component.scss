@@ -1,0 +1,14 @@
+@import "variables";
+
+.post-item-profile-container {
+    background-color: $secondary;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+    .initial-name {
+        color: $white;
+        font-weight: bold;
+        letter-spacing: 0.3rem;
+    }
+    
+}

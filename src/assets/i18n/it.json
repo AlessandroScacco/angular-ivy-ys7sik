@@ -1,3 +1,6 @@
-{
-    "test":"test"
+{    
+    "common": {
+        "publishedFrom": "Pubblicato da:"
+    }
+    
 }

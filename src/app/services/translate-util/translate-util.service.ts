@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
-import { Constants } from 'src/app/common/constants/constants';
+import { Constants } from '../../common/constants/constants';
 
 @Injectable({
   providedIn: 'root',

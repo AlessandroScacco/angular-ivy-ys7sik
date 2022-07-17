@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { PostsRoutingModule } from './posts-routing.module';
 import { PostsComponent } from './posts.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { ComponentsModule } from '../../components/components.module';
+import { CommonPipeModule } from '../../pipe/common-pipe.module';
 
 
 @NgModule({
@@ -13,6 +15,8 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [
     CommonModule,
     PostsRoutingModule,
+    ComponentsModule,
+    CommonPipeModule,
     TranslateModule.forChild()
   ]
 })
