@@ -1,18 +1,26 @@
 <section class="posts-container">
-
-    <div class="card ">
-        <p *ngIf="postSelected">Post selezionato: {{postSelected?.title}}</p>
-        <div class="card-header small-text">
-            Lista di post con informazioni dell'utente che ha scritto il post
+    <div>
+        <div class="input-group mb-3 search-container" [formGroup]="searchFormGroup">
+            <input type="text" class="form-control" formControlName="title"
+                placeholder="{{'posts.title_post_label' | translate}}" aria-label="Post title">
         </div>
-        <div class="card-body">
-            <div class="post-item-container" *ngFor="let post of posts">                        
-                <app-post-item [post]="post" [user]="post.userId | userFind: users"
-                (profileClicked)="postSelected = post"></app-post-item>                
+        <div class="card">
+            <div class="card-header small-text text-color-black">
+                {{'posts.title_card_list' | translate}}
+            </div>
+            <div class="card-body">
+                <div id="targetPostSelected" *ngIf="postSelected" class="detail-card-container">
+                    <app-post-detail-card [post]="postSelected" [user]="postSelected.userId | userFind: users"
+                        (closeClicked)="postSelected=null">
+                    </app-post-detail-card>
+                </div>
+
+                <div class="post-item-container" *ngFor="let post of posts | postsFilter:titleFilter"
+                    [ngClass]="{selected: post.id === postSelected?.id}">
+                    <app-post-item [post]="post" [user]="post.userId | userFind: users"
+                        (profileClicked)="handleProfileClicked(post)"></app-post-item>
+                </div>
             </div>
         </div>
-      </div>
-    
-
-
+    </div>
 </section>

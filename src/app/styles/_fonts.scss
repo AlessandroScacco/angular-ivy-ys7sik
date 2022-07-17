@@ -57,11 +57,19 @@ $font-montserrat: Montserrat, sans-serif;
   font-weight: bold;
 }
 
+.text-color-black {
+  color: $black
+}
+
 .text-color-white {
   color: $white
 }
 .text-color-secondary {
   color: $secondary;
+}
+
+.text-color-primary {
+  color: $primary;
 }
 
 h6 {

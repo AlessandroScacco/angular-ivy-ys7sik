@@ -4,15 +4,15 @@ import { Post } from "../../interfaces/post.interface";
 import { User } from "../../interfaces/user.interface";
 
 @Component({
-  selector: "app-post-item",
-  templateUrl: "./post-item.component.html",
-  styleUrls: ["./post-item.component.scss"],
+  selector: "app-post-detail-card",
+  templateUrl: "./post-detail-card.component.html",
+  styleUrls: ["./post-detail-card.component.scss"],
 })
-export class PostItemComponent implements OnInit {
+export class PostDetailCardComponent implements OnInit {
   @Input() post: Post;
   @Input() user: User;
 
-  @Output() profileClicked: EventEmitter<void> = new EventEmitter<void>();
+  @Output() closeClicked: EventEmitter<void> = new EventEmitter<void>();
 
   PathPage = PathPage;
 
@@ -20,7 +20,7 @@ export class PostItemComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  handleProfileClicked(): void {
-    this.profileClicked.emit();
+  handleClose(): void {
+    this.closeClicked.emit();
   }
 }
