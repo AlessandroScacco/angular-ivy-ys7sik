@@ -3,9 +3,19 @@
 .posts-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     .card {
         width: 100%;
         max-width: 60rem;    
+        border-radius: 1rem;
+        .card-header {
+            display: flex;
+            align-items: center;
+            height: 4rem;
+            border-top-right-radius: 1rem;
+            border-top-left-radius: 1rem;
+            background-color: $secondary;
+        }
         .card-body {
             .detail-card-container {
                 padding: 3rem;
@@ -17,6 +27,12 @@
         border-bottom: 0.1rem solid $separator;
         &:last-child {
             border: unset;
+        }
+    }
+
+    .search-container {
+        input {
+            max-width: 40%;            
         }
     }
     

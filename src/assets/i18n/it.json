@@ -1,8 +1,12 @@
 {    
-    "common": {
-        "publishedFrom": "Pubblicato da:",
-        "postPublishedFrom": "Post pubblicato da:",
+    "common": {              
         "alias": "alias"
-    }   
+    },
+    "posts": {
+        "title_post_label":"Titolo Post",
+        "title_card_list":"Lista di post con informazioni dell'utente che ha scritto il post",
+        "publishedFrom": "Pubblicato da:",
+        "postPublishedFrom": "Post pubblicato da:"
+    }  
     
 }

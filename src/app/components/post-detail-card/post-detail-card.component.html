@@ -2,15 +2,15 @@
     <div class="row">
         <div class="col-12">
             <div class="xsmall-text" *ngIf="user?.username">        
-                <span>{{'common.postPublishedFrom' | translate}} {{user.name}} </span>
+                <span>{{'posts.postPublishedFrom' | translate}} {{user.name}} </span>
                 <span> {{'common.alias' | translate}} </span>        
-                <a href="{{PathPage.USERS + '/' +user.id}}" class="text-color-secondary">
+                <a href="{{PathPage.USERS + '/' +user.id}}" class="text-color-primary">
                     {{user?.username}}
                 </a>
             </div>       
         </div>
         <div class="col-12">
-            <h5 class="text-color-secondary">{{post.title}}</h5>
+            <h5 class="text-color-primary">{{post.title}}</h5>
         </div>
         <div class="col-12">
             <h5 class="regular-text">{{post.body}}</h5>
