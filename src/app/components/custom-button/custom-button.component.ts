@@ -7,8 +7,7 @@ import { Component, Input, OnInit } from "@angular/core";
 })
 export class CustomButtonComponent implements OnInit {
   @Input() label: string;
-
-  @Input() cssClass: string = '';
+  @Input() cssClass: string = "";
 
   constructor() {}
 

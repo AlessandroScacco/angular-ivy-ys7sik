@@ -5,10 +5,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     .card {
         width: 100%;
-        max-width: 60rem;    
+        max-width: 60rem;
         border-radius: 1rem;
+
         .card-header {
             display: flex;
             align-items: center;
@@ -17,15 +19,18 @@
             border-top-left-radius: 1rem;
             background-color: $secondary;
         }
+
         .card-body {
             .detail-card-container {
                 padding: 3rem;
             }
-        }        
+        }
     }
+
     .post-item-container {
         padding: 1rem;
         border-bottom: 0.1rem solid $gray-light;
+
         &:last-child {
             border: unset;
         }
@@ -37,8 +42,8 @@
 
     .search-container {
         input {
-            max-width: 40%;            
+            max-width: 40%;
         }
     }
-    
+
 }

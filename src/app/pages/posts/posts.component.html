@@ -1,5 +1,5 @@
 <section class="posts-container">
-    <div>    
+    <div>
         <div class="input-group mb-3 search-container" [formGroup]="searchFormGroup">
             <input type="text" class="form-control" formControlName="title"
                 placeholder="{{'posts.title_post_label' | translate}}" aria-label="Post title">
@@ -15,8 +15,7 @@
                     </app-post-detail-card>
                 </div>
 
-                <div class="post-item-container" 
-                    *ngFor="let post of posts | postsFilter:titleFilter"
+                <div class="post-item-container" *ngFor="let post of posts | postsFilter:titleFilter"
                     [ngClass]="{selected: post.id === postSelected?.id}">
                     <app-post-item [post]="post" [user]="post.userId | userFind: users"
                         (profileClicked)="handleProfileClicked(post)"></app-post-item>

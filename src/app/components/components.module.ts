@@ -8,21 +8,18 @@ import { PostDetailCardComponent } from "./post-detail-card/post-detail-card.com
 import { CustomButtonComponent } from "./custom-button/custom-button.component";
 
 @NgModule({
-  imports: [
-    CommonModule, 
-    CommonPipeModule, 
-    TranslateModule.forChild()],
+  imports: [CommonModule, CommonPipeModule, TranslateModule.forChild()],
   declarations: [
     PostItemComponent,
     PostItemProfileComponent,
     PostDetailCardComponent,
-    CustomButtonComponent
+    CustomButtonComponent,
   ],
   exports: [
     PostItemComponent,
     PostItemProfileComponent,
     PostDetailCardComponent,
-    CustomButtonComponent
+    CustomButtonComponent,
   ],
 })
 export class ComponentsModule {}

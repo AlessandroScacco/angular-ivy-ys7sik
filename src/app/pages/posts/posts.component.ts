@@ -22,7 +22,10 @@ export class PostsComponent implements OnInit {
     title: new FormControl(),
   });
 
-  constructor(private postPageService: PostsPageService, private scroller: ViewportScroller) {}
+  constructor(
+    private postPageService: PostsPageService,
+    private scroller: ViewportScroller
+  ) {}
 
   ngOnInit(): void {
     this.retrieveData();
@@ -44,10 +47,10 @@ export class PostsComponent implements OnInit {
       .subscribe((value: any) => (this.titleFilter = value.title));
   }
 
-  handleProfileClicked( post: Post): void {    
+  handleProfileClicked(post: Post): void {
     this.postSelected = post;
     setTimeout(() => {
-      this.scroller.scrollToAnchor("targetPostSelected");  
+      this.scroller.scrollToAnchor("targetPostSelected");
     }, 10);
   }
 }
