@@ -1,26 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { Post } from '../../interfaces/post.interface';
-import { PostService } from '../../service/api/post.service';
+import { Component, OnInit } from "@angular/core";
+import { Post } from "../../interfaces/post.interface";
+import { User } from "../../interfaces/user.interface";
+import { PostsPageService } from "./services/posts-page.service";
 
 @Component({
-  selector: 'app-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss']
+  selector: "app-posts",
+  templateUrl: "./posts.component.html",
+  styleUrls: ["./posts.component.scss"],
 })
 export class PostsComponent implements OnInit {
-
   posts: Array<Post> = [];
+  users: Array<User> = [];
 
-  constructor(private postService: PostService) { }
+  constructor(private postPageService: PostsPageService) {}
 
   ngOnInit(): void {
-    this.retrievePosts();
+    this.retrieveData();
   }
 
-  private retrievePosts(): void {
-    this.postService.getPosts().subscribe((response: Array<Post>)=>{
-      this.posts = response;
-    }); 
+  private retrieveData(): void {
+    this.postPageService
+      .getPostsUsers()
+      .subscribe(([posts, users]: [Array<Post>, Array<User>]) => {        
+        this.posts = posts;
+        this.users = users;
+      });
   }
-
 }
