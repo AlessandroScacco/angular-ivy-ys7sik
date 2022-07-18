@@ -2,10 +2,11 @@ import { ViewportScroller } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
 import { debounceTime } from "rxjs";
-import { EndPoint } from "../../common/constants/endpoint";
+
 import { Post } from "../../interfaces/post.interface";
 import { User } from "../../interfaces/user.interface";
 import { PostsPageService } from "./services/posts-page.service";
+import { LoggerService } from "../../services/logger/logger.service";
 
 @Component({
   selector: "app-posts",
@@ -24,24 +25,26 @@ export class PostsComponent implements OnInit {
   });
 
   constructor(
+    private loggerService: LoggerService,
     private postPageService: PostsPageService,
     private scroller: ViewportScroller
   ) {}
 
   ngOnInit(): void {
-    
-    
     this.retrieveData();
     this.initializeFormGroup();
   }
 
   private retrieveData(): void {
-    this.postPageService
-      .getPostsUsers()
-      .subscribe(([posts, users]: [Array<Post>, Array<User>]) => {
+    this.postPageService.getPostsUsers().subscribe({
+      next: ([posts, users]: [Array<Post>, Array<User>]) => {
         this.posts = posts;
         this.users = users;
-      });
+      },
+      error: (error) => {
+        this.loggerService.warn("Error during retrieve PostUsers", error);
+      },
+    });
   }
 
   private initializeFormGroup(): void {
