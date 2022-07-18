@@ -13,7 +13,14 @@ export class PostApiService {
 
   public getPosts(): Observable<Array<Post>> {
     const httpRequest: HttpRequestInterface = {
-      endpoint: EndPoint.POSTS,
+      endpoint: EndPoint.Posts,
+    };
+    return this.httpService.get(httpRequest);
+  }
+
+  public getPostById(id: string): Observable<Post> {
+    const httpRequest: HttpRequestInterface = {
+      endpoint: EndPoint.PostById(id),
     };
     return this.httpService.get(httpRequest);
   }

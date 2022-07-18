@@ -10,7 +10,11 @@
             </div>
         </div>
         <div class="col-12 mb-3">
-            <h5 class="text-color-primary">{{post.title}}</h5>
+            <h5 class="text-color-primary">
+                <a href="{{PathPage.POSTS + '/' +post.id}}" class="text-color-primary">
+                    {{post.title}}
+                </a>   
+            </h5>
         </div>
         <div class="col-12 mb-3">
             <h5 class="regular-text">{{post.body}}</h5>
