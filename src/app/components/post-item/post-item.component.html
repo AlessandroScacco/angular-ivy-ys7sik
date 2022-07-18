@@ -1,0 +1,21 @@
+<div class="post-item-container container-fluid">
+    <div class="row align-items-center">
+        <div class="col-12 post-item-profile-container col-sm-2 col-md-1">
+            <app-post-item-profile [label]="user.name | userInitialName" (click)="handleProfileClicked()">
+            </app-post-item-profile>
+        </div>
+        <div class="col">
+            <div class="row row-title align-items-end">
+                <div class="col-12 align-self-start">
+                    <h5 class="text-color-primary">{{post.title}}</h5>
+                </div>
+                <div class="col-12 align-self-end xsmall-text bold" *ngIf="user?.username">
+                    {{"posts.publishedFrom" | translate}} 
+                    <a href="{{PathPage.USERS + '/' +user.id}}" class="text-color-primary">
+                         {{user?.username}}
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

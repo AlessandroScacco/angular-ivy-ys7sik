@@ -1,0 +1,26 @@
+/* Add application styles & imports to this file! */
+* {
+  box-sizing: border-box;
+}
+:root {
+  font-size: 10px;
+  background-color: #F2F2F2;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  
+  max-width: 90%;
+  padding: 1.6rem;
+  margin: 0 auto !important;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+@import './app/styles/variables';
+@import './app/styles/common';
+@import './app/styles/fonts';
+@import './app/styles/palette';
+@import './app/styles/utils';

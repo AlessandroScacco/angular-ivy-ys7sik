@@ -1,0 +1,49 @@
+@import "variables";
+
+.posts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .card {
+        width: 100%;
+        max-width: 60rem;
+        border-radius: 1rem;
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            height: 4rem;
+            border-top-right-radius: 1rem;
+            border-top-left-radius: 1rem;
+            background-color: $secondary;
+        }
+
+        .card-body {
+            .detail-card-container {
+                padding: 3rem;
+            }
+        }
+    }
+
+    .post-item-container {
+        padding: 1rem;
+        border-bottom: 0.1rem solid $gray-light;
+
+        &:last-child {
+            border: unset;
+        }
+
+        &.selected {
+            background-color: $gray-light;
+        }
+    }
+
+    .search-container {
+        input {
+            max-width: 40%;
+        }
+    }
+
+}

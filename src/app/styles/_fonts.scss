@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+$font-montserrat: Montserrat, sans-serif;
+
+* {
+  font-family: $font-montserrat;
+}
+
+.baseText {
+  font-family: $font-montserrat;  
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $black;
+}
+
+.xsmall-text {
+  @extend .baseText;
+  font-size: $font-size-xsmall;
+}
+
+.small-text {
+  @extend .baseText;
+  font-size: $font-size-small;
+}
+
+.regular-text {
+  @extend .baseText;
+  font-size: $font-size-regular;
+}
+
+.large-text {
+  @extend .baseText;
+  font-size: $font-size-large;
+}
+
+.label {
+  @extend .baseText;
+  font-size: $font-size-small;
+  font-weight: bold;
+}
+
+.bodyText {
+  @extend .baseText;
+  font-size: $font-size-regular;
+}
+
+.title {
+  @extend .baseText;
+  font-size: $font-size-regular;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-color-black {
+  color: $black
+}
+
+.text-color-white {
+  color: $white
+}
+.text-color-secondary {
+  color: $secondary;
+}
+
+.text-color-primary {
+  color: $primary;
+}
+
+h6 {
+  @extend .baseText;
+  font-size: $font-size-large;
+  font-weight: bold;
+}
+
+h5 {
+  @extend .baseText;
+  font-size: $font-size-h5;
+  font-weight: bold;
+}
+
+h4 {
+  @extend .baseText;
+  font-size: $font-size-h4;
+  font-weight: bold;
+}
+
+h3 {
+  @extend .baseText;
+  font-size: $font-size-h3;
+}
+
+h2 {
+  @extend .baseText;
+  font-size: $font-size-h2;
+}
+
+h1 {
+  @extend .baseText;
+  font-size: $font-size-h1;
+}
+
