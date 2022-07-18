@@ -10,7 +10,8 @@
         "company": "Azienda",
         "name": "Nome",
         "catchPhrase": "Slogan",
-        "bs": "Bs"
+        "bs": "Bs",
+        "author": "Authore"
     },
     "posts": {
         "title_post_label":"Titolo Post",

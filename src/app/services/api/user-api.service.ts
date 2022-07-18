@@ -13,7 +13,7 @@ export class UserApiService {
 
   public getUsers(): Observable<Array<User>> {
     const httpRequest: HttpRequestInterface = {
-      endpoint: EndPoint.USERS,
+      endpoint: EndPoint.Users,
     };
     return this.httpService.get(httpRequest);
   }
